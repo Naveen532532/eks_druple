@@ -18,7 +18,11 @@ spec:
         app: cicd-demo
     spec:
       containers:
+<<<<<<< HEAD
         - image: 078290242329.dkr.ecr.ap-south-1.amazonaws.com/eks_truple:latest
+=======
+        - image: 078290242329.dkr.ecr.ap-south-1.amazonaws.com/eks_truple
+>>>>>>> 0217b5ac978b26b88d6698dadf149d010fda2387
           imagePullPolicy: Always
           name: cicd-demo
           ports:
