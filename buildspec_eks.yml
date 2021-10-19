@@ -35,13 +35,13 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t eks_truple .
-      - docker tag eks_truple:latest 078290242329.dkr.ecr.ap-south-1.amazonaws.com/eks_truple:latest
+      - docker tag tulip_ecr:latest 894061530982.dkr.ecr.ap-south-1.amazonaws.com/tulip_ecr:latest
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 078290242329.dkr.ecr.ap-south-1.amazonaws.com/eks_truple:latest
+      - docker push 894061530982.dkr.ecr.ap-south-1.amazonaws.com/tulip_ecr:latest
       - echo Push the latest image to cluster
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl rollout restart -f eks_cicd/deployment.yaml
