@@ -27,7 +27,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 078290242329.dkr.ecr.ap-south-1.amazonaws.com/eks_truple
       - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME
-      - docker pull 078290242329.dkr.ecr.ap-south-1.amazonaws.com/eks_truple:latest
+      - docker pull 894061530982.dkr.ecr.ap-south-1.amazonaws.com/tulip_ecr:latest
       
 
   build:
